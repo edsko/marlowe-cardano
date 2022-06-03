@@ -68,15 +68,9 @@ EOI
 
 # Create the contract.
 
-ADDRESS_S=$(
-marlowe-cli contract address "${MAGIC[@]}"                \
-                             --slot-length "$SLOT_LENGTH" \
-                             --slot-offset "$SLOT_OFFSET" \
-)
+ADDRESS_S=$(marlowe-cli contract address "${MAGIC[@]}")
 
 marlowe-cli contract validator "${MAGIC[@]}"                \
-                               --slot-length "$SLOT_LENGTH" \
-                               --slot-offset "$SLOT_OFFSET" \
                                --out-file $PLUTUS_FILE      \
                                --print-stats
 
