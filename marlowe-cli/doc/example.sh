@@ -60,7 +60,7 @@ cat << EOI > $STATE_FILE
             $DATUM_LOVELACE
         ]
     ],
-    "minSlot": 10,
+    "minTime": $(date --date '+10 seconds' +%s),
     "boundValues": []
 }
 EOI
